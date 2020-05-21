@@ -16,3 +16,21 @@ mvn gcloud:deploy
 
 If all succeeds, you should be able to browse to http://&lt;project-id&gt;.appspot.com/ and receive
 a lovely greeting.
+
+## Running Locally
+
+Import the project into IntelliJ, and build the fat jar:
+
+```
+mvn package
+```
+
+Start the server:
+
+```
+java -jar target/helloworldservice-1.0-SNAPSHOT.jar server helloworld.yaml
+```
+
+Server will be up and running at http://localhost:8080/.
+
+You can directly run com.hypnoticocelot.appengine.helloworldservice.HelloWorldApplication from IntelliJ ```server helloworld.yaml``` as the program arguments in the configuration.
